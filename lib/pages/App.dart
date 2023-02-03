@@ -26,9 +26,15 @@ class AppState extends State<App> {
                 width: 100.0,
                 child: Image.asset('assets/images/login.jpg'),
               ),
+              const Divider(
+                height: 10.0,
+              ),
               const Text(
                 'Login',
                 style: TextStyle(fontSize: 40.0),
+              ),
+              const Divider(
+                height: 30.0,
               ),
               TextField(
                 enableInteractiveSelection: false,
@@ -69,14 +75,14 @@ class AppState extends State<App> {
                   print('Presiono el boton');
                 },
                 child: const Text(
-                  'Sing in',
+                  'Iniciar sesion',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 25.0,
                   ),
                 ),
               ),
-              ElevatedButton(
+              TextButton(
                 child: const Text('Registrarse'),
                 onPressed: () {
                   MaterialPageRoute route =

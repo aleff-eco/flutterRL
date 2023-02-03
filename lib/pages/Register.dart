@@ -1,4 +1,5 @@
 import 'package:a_app/pages/App.dart';
+import 'package:a_app/screens/onboarding/body_boarding.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget {
@@ -20,9 +21,15 @@ class Register extends StatelessWidget {
                 width: 100.0,
                 child: Image.asset('assets/images/login.jpg'),
               ),
+              const Divider(
+                height: 10.0,
+              ),
               const Text(
                 'Register',
                 style: TextStyle(fontSize: 40.0),
+              ),
+              const Divider(
+                height: 30.0,
               ),
               TextField(
                 enableInteractiveSelection: false,
@@ -118,12 +125,13 @@ class Register extends StatelessWidget {
                         validator: (value) =>
                             value == "Sexo" ? "campo requerido" : null,
                         value: gender,
-                        items: ["Femenino", "Masculino", "Otro"]
-                            .map((e) => DropdownMenuItem(
-                                  value: e,
-                                  child: Text(e),
-                                ))
-                            .toList(),
+                        items:
+                            ["Femenino", "Masculino", "Panzer VI Tiger", "Otro"]
+                                .map((e) => DropdownMenuItem(
+                                      value: e,
+                                      child: Text(e),
+                                    ))
+                                .toList(),
                         onChanged: (Object? value) {},
                       ),
                     ),
@@ -139,6 +147,20 @@ class Register extends StatelessWidget {
                   ),
                 ],
               ),
+              const Divider(
+                height: 70.0,
+              ),
+              TextButton(
+                child: const Text('Iniciar sesion'),
+                onPressed: () {
+                  MaterialPageRoute route =
+                      MaterialPageRoute(builder: (context) => const App());
+                  Navigator.push(context, route);
+                },
+              ),
+              const Divider(
+                height: 20.0,
+              ),
               ElevatedButton(
                 onPressed: () {},
                 child: const Text(
@@ -149,11 +171,11 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              ElevatedButton(
-                child: const Text('Iniciar sesion'),
+              TextButton(
+                child: const Text('Pagina principal'),
                 onPressed: () {
-                  MaterialPageRoute route =
-                      MaterialPageRoute(builder: (context) => const App());
+                  MaterialPageRoute route = MaterialPageRoute(
+                      builder: (context) => const BodyBoarding());
                   Navigator.push(context, route);
                 },
               ),
