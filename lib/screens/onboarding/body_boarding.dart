@@ -11,12 +11,9 @@ class BodyBoarding extends StatefulWidget {
 class _BodyBoardingState extends State<BodyBoarding> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const OnBoarding(),
+    return const Scaffold(
+      backgroundColor: Colors.white,
+      body: OnBoarding(),
     );
   }
 }

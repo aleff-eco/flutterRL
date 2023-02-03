@@ -1,5 +1,5 @@
+import 'package:a_app/screens/onboarding/body_boarding.dart';
 import 'package:flutter/material.dart';
-import 'package:a_app/pages/App.dart';
 
 
 void main() => runApp(const MyApp());
@@ -10,9 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'App Ale Legasov',
-      home: App(),
+      home: BodyBoarding(),
     );
   }
 }

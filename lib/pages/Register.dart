@@ -171,14 +171,14 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              TextButton(
-                child: const Text('Pagina principal'),
-                onPressed: () {
-                  MaterialPageRoute route = MaterialPageRoute(
-                      builder: (context) => const BodyBoarding());
-                  Navigator.push(context, route);
-                },
-              ),
+              // TextButton(
+              //   child: const Text('Pagina principal'),
+              //   onPressed: () {
+              //     MaterialPageRoute route = MaterialPageRoute(
+              //         builder: (context) => const BodyBoarding());
+              //     Navigator.push(context, route);
+              //   },
+              // ),
             ],
           )
         ],
